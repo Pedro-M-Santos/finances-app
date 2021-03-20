@@ -64,7 +64,6 @@ button{
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
 
 .react-modal-content{
@@ -88,5 +87,4 @@ button{
         filter: brightness(0.8);
     }
 }
-
 `

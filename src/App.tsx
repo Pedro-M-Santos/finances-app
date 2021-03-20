@@ -3,6 +3,7 @@ import {Header} from './components/Header'
 import { Dashboard } from "./components/Dashboard";
 import React, { useState } from "react";
 import { NewTransactionModal } from "./components/NewTransactionModal";
+import { TransactionsProvider } from "./components/Hooks/transactionsContext";
 
 
 export function App() {
@@ -17,7 +18,7 @@ export function App() {
       setIsNewTransactionOpen(false)
   }
   return (
-    <React.Fragment>
+    <TransactionsProvider>
       <GlobalStyle />
       <Header 
         onOpenNewTransactionModal={handleOpenNewTransactionModal}
@@ -27,6 +28,6 @@ export function App() {
         isOpen={isNewTransactionOpen}
         onRequestClose={handleCloseNewTransactionModal}
       />
-    </React.Fragment>
+    </TransactionsProvider>
   );
 }
